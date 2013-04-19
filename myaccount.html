@@ -1,0 +1,93 @@
+<!doctype html>  
+<head>
+<meta charset="UTF-8">
+<title>My Career Gym</title>
+<link rel="icon" href="images/favicon.gif" type="image/x-icon"/>
+ <!--[if lt IE 9]>
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+<link rel="shortcut icon" href="images/favicon.gif" type="image/x-icon"/> 
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link type="text/css" href="css/css3.css" rel="stylesheet" />
+<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.pikachoose.js"></script>
+<script language="javascript">
+			$(document).ready(
+				function (){
+					$("#pikame").PikaChoose();
+				});
+		</script>
+		
+
+
+    </head>
+    <body>
+	
+    <!--start container-->
+    <div id="container">
+
+    <!--start header-->
+
+    <header>
+ 
+    <!--start logo-->
+    <a href="/"id="logo"><img src="images/logo.png" width="221" height="100" alt="logo"/></a>    
+
+	<!--end logo-->
+	
+   <!--start menu-->
+
+	<nav>
+    <ul>
+    <li><a href="/">Home</a>
+
+	</li>
+    <li><a href="/aboutus">About us</a></li>
+	<li><a href="/services">Services</a></li>
+	<li><a href="/myaccount" class="current">My Account</a></li>
+
+    </ul>
+    </nav>
+	<!--end menu-->
+	
+
+    <!--end header-->
+	</header>
+
+
+ <!--start holder-->
+
+   <div class="holder_content">
+   
+   <section class="group1">
+   {% if mentees %}
+   	ok we are here......
+	<h3>Hello {{ mentees.nickname }}!</h3><br>
+    	<p>o</p>
+        {{ mentees.nickname }}
+        {% else %}
+        <a style="color:#3399FF; font-size:24px;" href="{{url|safe}}">{{url_linktext}}</a>
+        {% endif %}
+        
+      <p> You have to log in in order to access your account.</p>
+      <p> If you'd like to register click on the link below </p>
+    <a href="/services"><span class="read_more">Register</span></a>
+
+	</section>
+  </div>
+   <!--end holder-->
+  
+    </div>
+   <!--end container-->
+   
+   <!--start footer-->
+   <footer>
+   <div class="container">  
+   <div id="FooterTwo"> © 2013 MentorWeb </div>
+   <div id="FooterTree"> html5, google app engine   </div> 
+   </div>
+   </footer>
+   <!--end footer-->
+<!-- Free template distributed by http://freehtml5templates.com -->   
+   </body></html>
