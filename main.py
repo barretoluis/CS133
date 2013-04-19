@@ -78,7 +78,7 @@ class Services(webapp2.RequestHandler):
 		template = jinja_environment.get_template('services.html')
 		self.response.out.write(template.render());
 class MenteeReg(webapp2.RequestHandler):
-	def get(self):
+	def post(self):
 		template = jinja_environment.get_template('menteeReg.html')
 		self.response.out.write(template.render());	
 class MenteeReg2(webapp2.RequestHandler):
